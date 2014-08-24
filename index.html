@@ -12,12 +12,15 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Jquery.swipenav.js by theawesomecoder61</title>
+    <title>jquery.swipenav.js</title>
   </head>
 
   <body>
     <script>
 $(window).scroll(function() {
+  var speed = 8.0;
+  document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
+
   var navbarColor = "62,195,246";//color attr for rgba
   var smallLogoHeight = $('.small-logo').height();
   var bigLogoHeight = $('.big-logo').height();
@@ -50,12 +53,10 @@ $(window).scroll(function() {
 });
 </script>
 <style>
-/* *********************************
-           Variables
-  ********************************** */
-/* *********************************
-   Some Style Overrides on Bootstrap
-  ********************************** */
+body {
+  background: url(http://www.pixelmatortemplates.com/wp-content/uploads/2014/01/blueprint-final.png);
+  background-attachment: fixed;
+}
 .navbar-inverse {
   background: rgba(62, 195, 246, 0);
   border-bottom: none; }
