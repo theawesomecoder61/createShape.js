@@ -1,172 +1,167 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <!--[if lt IE 9]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-
-  <title>createShape.js</title>
-</head>
-
-<body>
-  <script>
-$(window).scroll(function() {
-// var speed = 4.0;
-// document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
-
-var navbarColor = "0, 153, 255";//color attr for rgba
-var smallLogoHeight = $('.small-logo').height();
-var bigLogoHeight = $('.big-logo').height();
-var navbarHeight = $('.navbar').height(); 
-
-var smallLogoEndPos = 0;
-var smallSpeed = (smallLogoHeight / bigLogoHeight);
-
-var ySmall = ($(window).scrollTop() * smallSpeed); 
-
-var smallPadding = navbarHeight - ySmall;
-if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
-if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
-if (smallPadding < 0) { smallPadding = 0; }
-
-$('.small-logo-container ').css({ "padding-top": smallPadding});
-
-var navOpacity = ySmall / smallLogoHeight; 
-if  (navOpacity > 1) { navOpacity = 1; }
-if (navOpacity < 0 ) { navOpacity = 0; }
-var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
-$('.navbar').css({"background-color": navBackColor});
-
-var shadowOpacity = navOpacity * 0.4;
-if ( ySmall > 1) {
-  $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
-} else {
-  $('.navbar').css({"box-shadow": "none"});
-}  
-});
-</script>
-<style>
-body {
-background: url(http://www.pixelmatortemplates.com/wp-content/uploads/2014/01/blueprint-final.png);
-background-attachment: fixed;
-}
-.navbar-inverse {
-background: #3A99D8;
-color: white;
-border-bottom: none; }
-
-.navbar-inverse .navbar-toggle {
-border: 1px solid #333;
-border-color: rgba(255, 255, 255, 0.7); }
-
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-border-color: transparent;
-@media (max-width: 767px) {
-  background: rgba(255, 255, 255, 0.75); }
-}
-
-.navbar-inverse .navbar-nav > li > a {
-color: black; }
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-color: #22F; }
-
-/* *********************************
-         Toolbar Logo
-********************************** */
-.small-logo-container {
-padding-top: 50px;
-height: 50px;
-overflow: hidden; }
-
-.small-logo {
-color: #333333;
-font-size: 2.5em;
-padding-bottom: 2px; }
-
-/* *********************************
-         Big Logo
-********************************** */
-.big-logo-row {
-background: #3A99D8; }
-.big-logo-row .big-logo-container {
-  padding-top: 50px; }
-.big-logo-row h1 {
-  font-size: 4em;
-  margin: 0;
-  padding: 0 0 15px 0;
-  @media (min-width: 400px) {
-    font-size: 4.5em; }
-
-  @media (min-width: 440px) {
-    font-size: 5.5em; }
-
-  @media (min-width: 500px) {
-    font-size: 6.5em; }
-
-  @media (min-width: 630px) {
-    font-size: 7.5em; }
-
-  @media (min-width: 768px) {
-    font-size: 9em;
-    padding-bottom: 30px; }
-
-  @media (min-width: 1200px) {
-    font-size: 12em; }
-}
-</style>
- <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>createShape.js</title>
+  </head>
+  <body>
+    <script>
+      $(window).scroll(function() {
+      // var speed = 4.0;
+      // document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
+      
+      var navbarColor = "0, 153, 255";//color attr for rgba
+      var smallLogoHeight = $('.small-logo').height();
+      var bigLogoHeight = $('.big-logo').height();
+      var navbarHeight = $('.navbar').height(); 
+      
+      var smallLogoEndPos = 0;
+      var smallSpeed = (smallLogoHeight / bigLogoHeight);
+      
+      var ySmall = ($(window).scrollTop() * smallSpeed); 
+      
+      var smallPadding = navbarHeight - ySmall;
+      if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
+      if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
+      if (smallPadding < 0) { smallPadding = 0; }
+      
+      $('.small-logo-container ').css({ "padding-top": smallPadding});
+      
+      var navOpacity = ySmall / smallLogoHeight; 
+      if  (navOpacity > 1) { navOpacity = 1; }
+      if (navOpacity < 0 ) { navOpacity = 0; }
+      var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
+      $('.navbar').css({"background-color": navBackColor});
+      
+      var shadowOpacity = navOpacity * 0.4;
+      if ( ySmall > 1) {
+        $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
+      } else {
+        $('.navbar').css({"box-shadow": "none"});
+      }  
+      });
+    </script>
+    <style>
+      body {
+      background: url(http://www.pixelmatortemplates.com/wp-content/uploads/2014/01/blueprint-final.png);
+      background-attachment: fixed;
+      }
+      .navbar-inverse {
+      background: #3A99D8;
+      color: white;
+      border-bottom: none;
+      }
+      .navbar-inverse .navbar-toggle {
+      border: 1px solid #333;
+      border-color: rgba(255, 255, 255, 0.7);
+      }
+      .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+      border-color: transparent;
+      @media (max-width: 767px) {
+      background: rgba(255, 255, 255, 0.75);
+      }
+      }
+      .navbar-inverse .navbar-nav > li > a {
+      color: white;
+      }
+      .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+      color: #22F;
+      }
+      /* *********************************
+      Toolbar Logo
+      ********************************** */
+      .small-logo-container {
+      padding-top: 50px;
+      height: 50px;
+      overflow: hidden; }
+      .small-logo {
+      color: #333333;
+      font-size: 2.5em;
+      padding-bottom: 2px; }
+      /* *********************************
+      Big Logo
+      ********************************** */
+      .big-logo-row {
+      background: #3A99D8; }
+      .big-logo-row .big-logo-container {
+      padding-top: 50px; }
+      .big-logo-row h1 {
+      font-size: 4em;
+      margin: 0;
+      padding: 0 0 15px 0;
+      @media (min-width: 400px) {
+      font-size: 4.5em; }
+      @media (min-width: 440px) {
+      font-size: 5.5em; }
+      @media (min-width: 500px) {
+      font-size: 6.5em; }
+      @media (min-width: 630px) {
+      font-size: 7.5em; }
+      @media (min-width: 768px) {
+      font-size: 9em;
+      padding-bottom: 30px; }
+      @media (min-width: 1200px) {
+      font-size: 12em; }
+      }
+    </style>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
-        <div class="small-logo-container">
-          <a class="small-logo" href="#">&nbsp;createShape.js</a>
+          </button>
+          <div class="small-logo-container">
+            <a class="small-logo" href="#">&nbsp;createShape.js</a>
+          </div>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Active</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
       </div>
-      <div class="navbar-collapse collapse">
-        
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Active</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
     </div>
-  </div>
-
-  <div class="container-fluid big-logo-row">
-    <div class="container">
+    <div class="container-fluid big-logo-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 big-logo-container">
+            <h1 class="big-logo">createShape.js</h1>
+          </div>
+          <!--/.col-xs-12 -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.container -->
+    </div>
+    <!--/.container-fluid -->
+    <div class="container" style="margin-top: 20px; margin-left: 80px; background: white; padding: 10px; border-radius: 8px;">
       <div class="row">
-        <div class="col-xs-12 big-logo-container">
-          <h1 class="big-logo">createShape.js</h1>
-        </div><!--/.col-xs-12 -->
-      </div><!--/.row -->
-    </div><!--/.container -->
-  </div><!--/.container-fluid -->
-
-  <div class="container" style="margin-top: 20px; margin-left: 80px; background: white; padding: 10px; border-radius: 8px;">
-    <div class="row">
-      <div class="col-lg-5 col-md-6 col-sm-8">
-        <h2>So what is it?</h2>
-        <p>createShape.js allows you to easily create geometric shapes in HTML5 Canvas.</p>
-        <h2>Any dependenices?</h2>
-        <p>Nope. No jQuery. No D3. No Raphael.</p>
-      </div><!--/.col-xs-12 -->
-    </div><!--/.row -->
-  </div><!--/.container -->
-</body>
+        <div class="col-lg-5 col-md-6 col-sm-8">
+          <h2>So what is it?</h2>
+          <p>createShape.js allows you to easily create geometric shapes in HTML5 Canvas.</p>
+          <h2>Any dependenices?</h2>
+          <p>Nope. No jQuery. No D3. No Raphael.</p>
+        </div>
+        <!--/.col-xs-12 -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!--/.container -->
+  </body>
 </html>
