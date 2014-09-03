@@ -4,6 +4,17 @@ this is readable, isn't?
 
 THIS IS STILL BEING WORKED ON AND ALL FEATURES HAVEN'T BEEN ADDED!
 
+added:
+- canvas detection (checks to see if it exists, else it creates a canvas)
+- rectangles
+- circle
+- text (WIP)
+- image
+
+need:
+- oval
+- bezier
+
 */
 
 function createShape(options) {
@@ -12,12 +23,11 @@ function createShape(options) {
       
       var newCanvas = document.createElement("canvas");
       
-      if(options.canvasQuery.indexOf(".") !== -1) {
-        newCanvas.setAttribute("class", options.canvasQuery);
+      if(options.canvasQuery.indexOf(".") > -1) {
+        newCanvas.setAttribute("class", options.canvasQuery.replace(".", ""));
       }
-      
-      if(options.canvasQuery.indexOf("#") !== -1) {
-        newCanvas.id = options.canvasQuery;
+      if(options.canvasQuery.indexOf("#") > -1) {
+        newCanvas.id = options.canvasQuery.replace("#", "");
       }
       
       newCanvas.setAttribute("width", options.canvasWidth);
@@ -28,8 +38,8 @@ function createShape(options) {
     
     // variables
     var canvas = document.querySelector(options.canvasQuery);
-    var context = canvas.getContext('2d');
-
+    var context = canvas.getContext("2d");
+    
     // begins path
     context.beginPath();
     
