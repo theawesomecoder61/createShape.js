@@ -1,7 +1,19 @@
-jquery.swipenav.js
+createShape.js
 ==================
 
-Navigate by swiping left or right
+Easily create shapes in a HTML5 canvas!
 
+No knowledge of canvas is needed!
 
-Coming soon!
+Creates:
+- rectangle
+- circle
+- semicircle
+- text
+
+Options:
+- x and y
+- height and width
+- fill
+- stroke (color, width)
+- radius
