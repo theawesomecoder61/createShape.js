@@ -15,117 +15,124 @@
   <body>
     <script>
       $(window).scroll(function() {
-      // var speed = 4.0;
-      // document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
-      
-      var navbarColor = "0, 153, 255";//color attr for rgba
-      var smallLogoHeight = $('.small-logo').height();
-      var bigLogoHeight = $('.big-logo').height();
-      var navbarHeight = $('.navbar').height(); 
-      
-      var smallLogoEndPos = 0;
-      var smallSpeed = (smallLogoHeight / bigLogoHeight);
-      
-      var ySmall = ($(window).scrollTop() * smallSpeed); 
-      
-      var smallPadding = navbarHeight - ySmall;
-      if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
-      if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
-      if (smallPadding < 0) { smallPadding = 0; }
-      
-      $('.small-logo-container ').css({ "padding-top": smallPadding});
-      
-      var navOpacity = ySmall / smallLogoHeight; 
-      if  (navOpacity > 1) { navOpacity = 1; }
-      if (navOpacity < 0 ) { navOpacity = 0; }
-      var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
-      $('.navbar').css({"background-color": navBackColor});
-      
-      var shadowOpacity = navOpacity * 0.4;
-      if ( ySmall > 1) {
-        $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
-      } else {
-        $('.navbar').css({"box-shadow": "none"});
-      }  
+        // var speed = 4.0;
+        // document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
+
+        var navbarColor = "0, 153, 255";//color attr for rgba
+        var smallLogoHeight = $('.small-logo').height();
+        var bigLogoHeight = $('.big-logo').height();
+        var navbarHeight = $('.navbar').height(); 
+
+        var smallLogoEndPos = 0;
+        var smallSpeed = (smallLogoHeight / bigLogoHeight);
+
+        var ySmall = ($(window).scrollTop() * smallSpeed); 
+
+        var smallPadding = navbarHeight - ySmall;
+        if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
+        if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
+        if (smallPadding < 0) { smallPadding = 0; }
+
+        $('.small-logo-container ').css({ "padding-top": smallPadding});
+
+        var navOpacity = ySmall / smallLogoHeight; 
+        if  (navOpacity > 1) { navOpacity = 1; }
+        if (navOpacity < 0 ) { navOpacity = 0; }
+        var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
+        $('.navbar').css({"background-color": navBackColor});
+
+        var shadowOpacity = navOpacity * 0.4;
+        if ( ySmall > 1) {
+          $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
+        } else {
+          $('.navbar').css({"box-shadow": "none"});
+        }  
       });
     </script>
     <style>
       body {
-      background: url(http://www.pixelmatortemplates.com/wp-content/uploads/2014/01/blueprint-final.png);
-      background-attachment: fixed;
+        background: url(http://www.pixelmatortemplates.com/wp-content/uploads/2014/01/blueprint-final.png);
+        background-attachment: fixed;
       }
-      h3 {
-      display: block;
+      h2 {
+        display: block;
+        font-size: 40pt;
+        color: white;
+        margin-left: 20px;
+      }
+      p, ul {
+        color: white;
+        border-radius: 8px;
+        font-size: 14pt;
+        margin-left: 20px;
       }
       .navbar-inverse {
-      background: #3A99D8;
-      color: #fff;
-      border-bottom: none;
+        background: rgb(0, 153, 255);
+        color: #fff;
+        border-bottom: none;
       }
       .navbar-inverse .navbar-toggle {
-      border: 1px solid #333;
-      border-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid #333;
+        border-color: rgba(255, 255, 255, 0.7);
       }
       .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-      border-color: transparent;
-      @media (max-width: 767px) {
-      background: rgba(255, 255, 255, 0.75);
-      }
+        border-color: transparent;
+        @media (max-width: 767px) {
+          background: rgba(255, 255, 255, 0.75);
+        }
       }
       .navbar-inverse .navbar-nav > li > a {
-      color: #fff;
+        color: #fff;
       }
       .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-      color: #22F;
+        color: #22F;
       }
       /* *********************************
       Toolbar Logo
       ********************************** */
       .small-logo-container {
-      padding-top: 50px;
-      height: 50px;
-      overflow: hidden;
+        padding-top: 50px;
+        height: 50px;
+        overflow: hidden;
       }
       .small-logo {
-      color: #fff;
-      font-size: 2.5em;
-      padding-bottom: 2px;
+        color: #fff;
+        font-size: 2.5em;
+        padding-bottom: 2px;
       }
       /* *********************************
       Big Logo
       ********************************** */
       .big-logo-row {
-      color: #fff;
-      background: #3A99D8;
-        
+        color: #fff;
+        background: rgb(0, 153, 255);
       }
       .big-logo-row .big-logo-container {
-      padding-top: 50px;
-        
+        padding-top: 50px;
       }
       .big-logo-row h1 {
-      font-size: 4em;
-      margin: 0;
-      padding: 0 0 15px 0;
-      @media (min-width: 400px) {
-      font-size: 4.5em;
-      }
-      @media (min-width: 440px) {
-      font-size: 5.5em;
-      }
-      @media (min-width: 500px) {
-      font-size: 6.5em;
-      }
-      @media (min-width: 630px) {
-      font-size: 7.5em;
-      }
-      @media (min-width: 768px) {
-      font-size: 9em;
-      padding-bottom: 30px;
-      }
-      @media (min-width: 1200px) {
-      font-size: 12em;
-      }
+        font-size: 4em;
+        margin: 0;
+        padding: 0 0 15px 0;
+        @media (min-width: 400px) {
+          font-size: 4.5em;
+        }
+        @media (min-width: 440px) {
+          font-size: 5.5em;
+        }
+        @media (min-width: 500px) {
+          font-size: 6.5em;
+        }
+        @media (min-width: 630px) {
+          font-size: 7.5em;
+        }
+        @media (min-width: 768px) {
+          font-size: 9em;
+          padding-bottom: 30px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 12em;
+        }
       }
     </style>
     <!-- Fixed navbar -->
@@ -133,10 +140,10 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <div class="small-logo-container">
             <a class="small-logo" href="#">&nbsp;createShape.js</a>
@@ -150,7 +157,6 @@
             <li><a href="#">Link</a></li>
           </ul>
         </div>
-        <!--/.nav-collapse -->
       </div>
     </div>
     <div class="container-fluid big-logo-row">
@@ -159,30 +165,26 @@
           <div class="col-xs-12 big-logo-container">
             <h1 class="big-logo">createShape.js</h1>
           </div>
-          <!--/.col-xs-12 -->
         </div>
-        <!--/.row -->
       </div>
-      <!--/.container -->
     </div>
-    <!--/.container-fluid -->
-    <h3>createShape.js</h3>
-      <p>Welcome to createShape.js!</p>
-      <h3>What does it do?</h3>
-      <p>It can create:</p>
-      <ul>
+    <h2>createShape.js</h2>
+    <p>Welcome to createShape.js!</p>
+    <h2>What does it do?</h2>
+    <p>It can create:</p>
+    <ul>
       <li>rectangles</li>
       <li>circles</li>
       <li>semicircles</li>
       <li>text</li>
       <li>images (coming soon!)</li>
-      </ul>
-      <p>for you without any knowledge of the HTML5 canvas. It can also create canvases for you, if you're that lazy, like I am. :)</p>
-      <h3>jQuery?</h3>
-      <p>Nope. No dependencies, no worries. All vanilla Javascript.</p>
-      <h3>Size</h3>
-      <p>This plugin ain't fat, so your page load will be a whole lot less.</p>
-      <h3>So, where's the docs?</h3>
-      <p>There is no docs! However, there is a wiki that you can check out. (It has more than just the docs.)</p>
+    </ul>
+    <p>for you without any knowledge of the HTML5 canvas. It can also create canvases for you, if you're that lazy, like I am. :)</p>
+    <h2>jQuery?</h2>
+    <p>Nope. No dependencies, no worries. All vanilla Javascript.</p>
+    <h2>Size</h2>
+    <p>This plugin ain't fat, so your page load will be a whole lot less.</p>
+    <h2>So, where's the docs?</h2>
+    <p>There is no docs! However, there is a wiki that you can check out. (It has more than just the docs.)</p>
   </body>
 </html>
