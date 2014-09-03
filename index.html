@@ -91,37 +91,6 @@
         -moz-user-drag: none;
         user-drag: none;
       }
-      #loader {
-        background: rgba(255, 255, 255, 0.95);
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        position: fixed;
-      }
-      #spinner {
-        position: fixed;
-        -webkit-animation: spin 4s linear infinite;
-        -moz-animation: spin 4s linear infinite;
-        animation: spin 4s linear infinite;
-      }
-      #loader-text {
-        position: fixed;
-        font-size: 28pt;
-        font-weight: 300;
-        line-height: 1.4;
-      }
-      button, .btn, ul li a {
-        outline: none !important;
-      }
-      #sl-2 .tooltip, #sl-3 .tooltip, #sl-4 .tooltip {
-        display: none;
-      }
-
-      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
     </style>
     <script>
@@ -206,21 +175,16 @@
 
     <section class="container-fluid" id="section1">
       <h1 class="text-center v-center">Hello!</h1>
-      <div class="lead text-center">Welcome to createShape.jsg!</div>
+      <div class="lead text-center">Welcome to createShape.js!</div>
       <div class="row">
         <div class="col-sm-4">
           <div class="row">
-            <div class="col-sm-10 col-sm-offset-2 text-center"><h3>Simple</h3><p>Hosting shouldn't be a hassle. So we made it simple for you.</p><i class="fa fa-smile-o fa-5x"></i></div>
+            <div class="col-sm-10 col-sm-offset-2 text-center"><h3>Simple</h3><p>Canvas shouldn't be difficult. So we made it simple for you.</p><i class="fa fa-smile-o fa-5x"></i></div>
           </div>
         </div>
         <div class="col-sm-4 text-center">
           <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 text-center"><h3>Fast</h3><p>Our servers are constantly being updated and rarely go down.</p><i class="fa fa-hdd-o fa-5x"></i></div>
-          </div>
-        </div>
-        <div class="col-sm-4 text-center">
-          <div class="row">
-            <div class="col-sm-10 text-center"><h3>Cheap</h3><p>We have various packages based off of your needs.</p><i class="fa fa-money fa-5x"></i></div>
+            <div class="col-sm-10 col-sm-offset-1 text-center"><h3>Lightweight</h3><p>createShape.js is a tiny plugin, so your page loads are tons faster.</p><i class="fa fa-file-text-o fa-5x"></i></div>
           </div>
         </div>
       </div>
