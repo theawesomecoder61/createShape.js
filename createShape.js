@@ -1,4 +1,10 @@
-// this is readable, isn't?
+/*
+
+this is readable, isn't?
+
+THIS IS STILL BEING WORKED ON AND ALL FEATURES HAVEN'T BEEN ADDED!
+
+*/
 
 function createShape(options) {
   // creates a new canvas and applies attributes to it
