@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,13 +134,6 @@
           offset: 50
         });
 
-        // center spinner
-        centerSpinner();
-        centerText();
-        $(window).on('load resize', function() {
-          centerSpinner();
-          centerText();
-        });
 
         // email links
         $(".email").each(function() {
@@ -204,9 +197,8 @@
         <div class="navbar-collapse collapse" id="navbar-collapsible">
           <ul class="nav navbar-nav navbar-left">
             <li><a href="#section1">Hello</a></li>
-            <li><a href="#section2">Why</a></li>
-            <li><a href="#section3">How</a></li>
-            <li><a href="#section5">Packages</a></li>
+            <li><a href="#section2">Demos</a></li>
+            <li><a href="#section3">Download</a></li>
           </ul>
         </div>
       </div>
@@ -250,18 +242,19 @@
     </section>
 
     <section class="container-fluid" id="section3">
-      <h2 class="text-center">How it works</h2>
+      <h2 class="text-center">Download createShape.js</h2>
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <p class="lead text-center">The hosting requires you to have special software. But don't worry about that. It's included in our Pro and Pro Plus packages. You can use the software to upload your files to the servers and that's all you have to do!</p>
+          <h3>Let us host it for you</h3>
+          <p class="lead text-center"><pre></pre></p>
+          <h3>Download the minfied version</h3>
+          <p class="lead">coming soon!</p>
+          <h3>Download the full version</h3>
+          <p class="lead">coming soon!</p>
         </div>
       </div>
     </section>
 
-    <section class="container-fluid" id="section5">
-      <h2 class="text-center">Packages</h2>
-      <p class="lead text-center">Choose any package you like and click the button below the features to get started.</p><br/>
-    </section>
 
     <footer id="footer">
       <div class="container-fluid">
