@@ -13,7 +13,7 @@ added:
 
 need:
 - oval
-- bezier
+- line
 
 */
 
