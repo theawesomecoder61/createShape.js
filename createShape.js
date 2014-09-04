@@ -2,17 +2,6 @@
 
 this is readable, isn't?
 
-THIS IS STILL BEING WORKED ON AND ALL FEATURES HAVEN'T BEEN ADDED!
-
-added:
-- canvas detection (checks to see if it exists, else it creates a canvas)
-- lines
-- rectangles
-- circle
-- oval (WIP)
-- text
-- image
-
 */
 
 function createShape(options) {
