@@ -5,6 +5,7 @@ Welcome to createShape.js!
 
 ## What does it do?
 It can create:
+- lines
 - rectangles
 - circles
 - semicircles
