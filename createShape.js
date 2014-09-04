@@ -6,13 +6,12 @@ THIS IS STILL BEING WORKED ON AND ALL FEATURES HAVEN'T BEEN ADDED!
 
 added:
 - canvas detection (checks to see if it exists, else it creates a canvas)
+- lines
 - rectangles
 - circle
+- oval (WIP)
 - text
 - image
-
-need:
-- oval
 
 */
 
@@ -52,6 +51,11 @@ function createShape(options) {
     context.arc(options.x, options.y, options.radius, 0, 2 * Math.PI, false);
   }
 
+  // oval
+  if(options.shape == "oval") {
+    context.arc(options.x, options.y, options.radius, 0, 2 * Math.PI, false);
+  }
+
   // semicircle
   if(options.shape == "semicircle") {
     context.arc(options.x, options.y, options.radius, 0, 1 * Math.PI, false);
@@ -74,18 +78,22 @@ function createShape(options) {
   }
 
   // alpha
-  if(options.opacity !== "" || options.opacity !== null) {
-    context.globalAlpha = options.opacity;
+  if(options.canvasOpacity !== "" || options.canvasOpacity !== null) {
+    context.globalAlpha = options.canvasOpacity;
   }
 
   // translate
   if(options.translate !== "" || options.translate !== null) {
-    // context.translate(options.translate); screws up shapes
+    if(options.shape == "oval" || options.shape == "circle") {
+      context.translate(options.translate);
+    }
   }
 
   // scale
   if(options.scale !== "" || options.scale !== null) {
-    // context.scale(options.scale); screws up shapes as well
+    if(options.shape == "oval" || options.shape == "circle") {
+      context.scale(2, 1);
+    }
   }
 
   // flip
