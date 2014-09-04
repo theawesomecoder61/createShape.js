@@ -40,10 +40,6 @@ function createShape(options) {
     context.arc(options.x, options.y, options.radius, 0, 2 * Math.PI, false);
   }
 
-  // oval
-  if(options.shape == "oval") {
-    context.arc(options.x, options.y, options.radius, 0, 2 * Math.PI, false);
-  }
 
   // semicircle
   if(options.shape == "semicircle") {
@@ -69,20 +65,6 @@ function createShape(options) {
   // alpha
   if(options.canvasOpacity !== "" || options.canvasOpacity !== null) {
     context.globalAlpha = options.canvasOpacity;
-  }
-
-  // translate
-  if(options.translate !== "" || options.translate !== null) {
-    if(options.shape == "oval" || options.shape == "circle") {
-      context.translate(options.translate);
-    }
-  }
-
-  // scale
-  if(options.scale !== "" || options.scale !== null) {
-    if(options.shape == "oval" || options.shape == "circle") {
-      context.scale(2, 1);
-    }
   }
 
   // flip
