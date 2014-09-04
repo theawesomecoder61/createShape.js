@@ -29,7 +29,14 @@ function createShape(options) {
 
   // begins path
   context.beginPath();
-
+  
+  // line
+  if(options.shape == "line") {
+    context.moveTo(options.x1, options.y1);
+    context.lineTo(options.x2, options.y2);
+    context.stroke();
+  }
+  
   // rectangle
   if(options.shape == "rectangle" || options.shape == "rect") {
     context.rect(options.x, options.y, options.width, options.height);
