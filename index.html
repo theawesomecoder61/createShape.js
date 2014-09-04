@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="http://htmleditr.webstarts.com/js/FileSaver.js"></script>
+    <script src="http://htmleditr.webstarts.com/js/Blob.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -147,6 +149,13 @@
           }
         });
 
+        var script = 'function createShape(e){if(!document.querySelector(e.canvasQuery)){var t=document.createElement("canvas");if(e.canvasQuery.indexOf(".")>-1){t.setAttribute("class",e.canvasQuery.replace(".",""))}if(e.canvasQuery.indexOf("#")>-1){t.id=e.canvasQuery.replace("#","")}t.setAttribute("width",e.canvasWidth);t.setAttribute("height",e.canvasHeight);document.querySelector(e.appendTo).appendChild(t)}var n=document.querySelector(e.canvasQuery);var r=n.getContext("2d");r.beginPath();if(e.shape=="line"){r.moveTo(e.x1,e.y1);r.lineTo(e.x2,e.y2);r.stroke()}if(e.shape=="rectangle"||e.shape=="rect"){r.rect(e.x,e.y,e.width,e.height)}if(e.shape=="circle"){r.arc(e.x,e.y,e.radius,0,2*Math.PI,false)}if(e.shape=="semicircle"){r.arc(e.x,e.y,e.radius,0,1*Math.PI,false)}if(e.shape=="text"){r.font=e.font;r.fillText(e.text,e.x,e.y);r.textAlign=e.textAlign}if(e.shape=="image"){var i=new Image;i.onload=function(){r.drawImage(i,e.x,e.y,e.width,e.height)};i.src=e.src}if(e.canvasOpacity!==""||e.canvasOpacity!==null){r.globalAlpha=e.canvasOpacity}if(e.flip=="h"||e.flip=="horizontal"||e.flip=="horizontally"){r.scale(-1,1)}if(e.flip=="v"||e.flip=="vertical"||e.flip=="vertically"){r.scale(1,-1)}r.fillStyle=e.fillColor;r.fill();r.lineWidth=e.strokeWidth;r.strokeStyle=e.strokeColor;r.stroke()}';
+        
+        $("#full-dl").click(function() {
+          var blob = new Blob([script], {type: "text/plain;charset=utf-8"});
+          saveAs(blob, "createShape.js");
+        });
+
       });
     </script>
     </head>
@@ -230,11 +239,11 @@
           <h3>GitHub repo</h3>
           <p class="lead"><a href="https://github.com/theawesomecoder61/createShape.js" style="color: #DEDEFF;">click here</a></p>
           <h3>Let us host it for you</h3>
-          <p class="lead text-center"><pre>&lt;script src="http://rawgithub.com/theawesomecoder61/createShape.js/master/createShape.min.js"&gt;&lt;/script&gt;</pre></p>
+          <p class="lead text-center"><pre>&lt;script src="http://theawesomecoder61.github.io/createShape.js/js/createShape.js"&gt;&lt;/script&gt;</pre></p>
           <h3>Download the minfied version</h3>
-          <p class="lead"><button type="button" class="btn btn-default btn-lg" onclick="// window.open('js/createShape.min.js', '_self')">coming soon</button></p>
+          <p class="lead"><button type="button" class="btn btn-default btn-lg" id="minify-dl">coming soon</button></p>
           <h3>Download the full version</h3>
-          <p class="lead"><button type="button" class="btn btn-default btn-lg" onclick="window.open('js/createShape.js', '_self')">Download the full version</button</p>
+          <p class="lead"><button type="button" class="btn btn-default btn-lg" id="full-dl">Download the full version</button</p>
         </div>
       </div>
     </section>
