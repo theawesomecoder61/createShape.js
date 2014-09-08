@@ -68,6 +68,13 @@ function createShape(options) {
     };
     newImg.src = options.src;
   }
+  
+  // shadow
+  context.shadowColor = options.shadowColor;
+  context.shadowBlur = options.shadowBlur;
+  context.shadowOffsetX = options.shadowXOffset;
+  context.shadowOffsetY = options.shadowYOffse
+    
 
   // alpha
   if(options.canvasOpacity !== "" || options.canvasOpacity !== null) {
