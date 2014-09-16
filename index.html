@@ -150,22 +150,18 @@
             }
           }
         });
-
-        var fullScript = '';
-        var minifyScript = '';
         
         $("#repo-dl").click(function() {
           window.open("https://github.com/theawesomecoder61/createShape.js/archive/master.zip", "_self");
         });
         
-        $("#minify-dl").click(function() {
-          var blob = new Blob([minifyScript], {type: "text/plain;charset=utf-8"});
-          saveAs(blob, "createShape.min.js");
-        });
-        
-        $("#full-dl").click(function() {
+        /*
           var blob = new Blob([fullScript], {type: "text/plain;charset=utf-8"});
           saveAs(blob, "createShape.js");
+        */
+        
+        $("#full-dl").click(function() {
+          window.open("http://theawesomecoder61.github.io/createShape.js/js/createShape.js", "_self")
         });
 
       });
