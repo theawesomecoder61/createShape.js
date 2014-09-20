@@ -1,6 +1,6 @@
 /*
 
-this is readable, isn't?
+this is readable, isn't? good, cuz this is the full, readable version
 
 */
 
@@ -69,11 +69,15 @@ function createShape(options) {
     newImg.src = options.src;
   }
   
+  // clear rect
+  ctx.clearRect(options.clearX1, options.clearY1, options.X2, options.Y2);
+  
   // shadow
   context.shadowColor = options.shadowColor;
   context.shadowBlur = options.shadowBlur;
   context.shadowOffsetX = options.shadowXOffset;
-  context.shadowOffsetY = options.shadowYOffse
+  context.shadowOffsetY = options.shadowYOffset;
+    
 
   // alpha
   if(options.canvasOpacity !== "" || options.canvasOpacity !== null) {
@@ -87,6 +91,9 @@ function createShape(options) {
   if(options.flip == "v" || options.flip == "vertical" || options.flip == "vertically") {
     context.scale(1, -1);
   }
+
+  // rotate
+  context.rotate(options.rotate);
 
   // fill
   context.fillStyle = options.fillColor;
