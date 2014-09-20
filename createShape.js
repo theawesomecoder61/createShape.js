@@ -70,7 +70,7 @@ function createShape(options) {
   }
   
   // clear rect
-  ctx.clearRect(options.clearX1, options.clearY1, options.X2, options.Y2);
+  context.clearRect(options.clearX1, options.clearY1, options.X2, options.Y2);
   
   // shadow
   context.shadowColor = options.shadowColor;
