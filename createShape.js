@@ -1,6 +1,8 @@
 /*
 
-this is readable, isn't? good, cuz this is the full, readable version
+createShape.js version 3.5
+
+this is readable, isn't? good, cuz this is the full, readable version.
 
 */
 
