@@ -5,6 +5,7 @@ Welcome to createShape.js! Check out our official createShape.js [website](http:
 
 ## Version 3.7!
 - detects for canvas support
+- rotate
 
 ## What does it do?
 It can create:
