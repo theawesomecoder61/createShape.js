@@ -1,7 +1,10 @@
 createShape.js
 ==================
 
-Welcome to createShape.js!
+Welcome to createShape.js! Also, check out our website! [website](http://theawesomecoder61.github.io/createShape.js/)
+
+## Version 3.7!
+- detects for canvas support
 
 ## What does it do?
 It can create:
@@ -12,7 +15,7 @@ It can create:
 - text
 - images
 
-for you without any knowledge of the HTML5 canvas. It can also create canvases for you, if you're that lazy, like I am. :)
+for you without any knowledge of the HTML5 canvas. It can also create a canvas for you, if you're that lazy, like I am. :)
 
 ## jQuery?
 Nope. No dependencies, no worries. All [vanilla](http://www.gianninewyork.com/assets/images/product-Vanilla.jpg) Javascript.
