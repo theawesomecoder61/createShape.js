@@ -1,7 +1,7 @@
 createShape.js
 ==================
 
-Welcome to createShape.js! Also, check out our website! [website](http://theawesomecoder61.github.io/createShape.js/)
+Welcome to createShape.js! Check out our official createShape.js [website](http://theawesomecoder61.github.io/createShape.js/)!
 
 ## Version 3.7!
 - detects for canvas support
