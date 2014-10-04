@@ -7,6 +7,13 @@ this is readable, isn't? good, cuz this is the full, readable version.
 */
 
 function createShape(options) {
+  // detects if canvas is supported
+  function supported(){
+    var elem = document.createElement("canvas");
+    return !!(elem.getContext && elem.getContext("2d"));
+  }
+  console.log("Canvas supported: " + supported());
+
   // creates a new canvas if it doesn't exist
   if(!document.querySelector(options.canvasQuery)) {
 
