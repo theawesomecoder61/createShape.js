@@ -9,13 +9,14 @@ Welcome to createShape.js! Check out the [official createShape.js website](http:
 
 ## What does it do?
 It can create:
+- canvases
 - lines
 - rectangles
 - circles
 - semicircles
 - and more!
 
-for you without any knowledge of the HTML5 canvas. It can also create a canvas for you, if you're that lazy, like I am. :)
+for you without any knowledge of the HTML5 canvas. :)
 
 ## jQuery?
 Nope, no dependencies, no worries. All [vanilla](http://www.gianninewyork.com/assets/images/product-Vanilla.jpg) Javascript. See what I did there?
